@@ -1,1 +1,42 @@
-test
+<!doctype HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />	
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	
+</head>
+<body>
+	<style>
+		img{
+			padding: 10px;
+		}
+	</style>
+
+	<div class="col-lg-4">
+      <div class="input-group">
+        <input type="text" class="form-control" id="imagenamePath" value="src_image_example.png">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="btnGetImage" value="Get image" onclick="getImage()">Get picture</button>
+        </span>
+      </div>
+    </div>
+
+	<div class="col-lg-4">
+      <div class="input-group">
+        <input type="text" class="form-control" disabled="disabled" id="palettePath" value="palette.xml">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" disabled="disabled" id="btnSetPalette" value="Set palette" onclick="setPalette()">Set palette</button>
+        </span>
+      </div>
+    </div>        
+
+    <br/><br/>
+
+    <img id="picture" width="30%" style="float: left" onload="EnablePalette()" />
+    <img id="pictureRes" onload="EnablePalette()" />
+
+	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
