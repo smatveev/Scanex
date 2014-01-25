@@ -6,7 +6,6 @@ var picture = $("#picture");
 
 function getImage()
 {
-	console.log(picture);
 	picture.attr("src", $('#imagenamePath').val()).appendTo('body');
 }
 
@@ -48,7 +47,7 @@ function getPallete()
 {
 	$.ajax({
 		type: "GET",
-		url: "palette.xml",
+		url: $("#palettePath").val(),
 		dataType: "xml",
 		error: function () {
 			alert('Error loading XML document');
@@ -60,8 +59,7 @@ function getPallete()
 function setPalette()
 {
 	var img = picture[0];
-	canvas = document.createElement("canvas"); //document.getElementById('example');
-	console.log(img);
+	canvas = document.createElement("canvas");
 	ctx = canvas.getContext("2d");
 	canvas.width = img.width;
 	canvas.height = img.height;
